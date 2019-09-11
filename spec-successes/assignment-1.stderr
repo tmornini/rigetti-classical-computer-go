@@ -1,0 +1,13 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI a X
+PC:10   X:0a   Y:00   Z:00   W:00   C:f   E:f   |   LDI 0 Y
+PC:20   X:0a   Y:00   Z:00   W:00   C:f   E:f   |   STR X Y
+PC:30   X:0a   Y:00   Z:00   W:00   C:f   E:f   |   LDI b X
+PC:40   X:0b   Y:00   Z:00   W:00   C:f   E:f   |   LDI 1 Y
+PC:50   X:0b   Y:01   Z:00   W:00   C:f   E:f   |   STR X Y
+PC:60   X:0b   Y:01   Z:00   W:00   C:f   E:f   |   LDI 0 Z
+PC:70   X:0b   Y:01   Z:00   W:00   C:f   E:f   |   LDM Z X
+PC:80   X:0a   Y:01   Z:00   W:00   C:f   E:f   |   LDI 1 W
+PC:90   X:0a   Y:01   Z:00   W:01   C:f   E:f   |   LDM W Y
+PC:a0   X:0a   Y:0b   Z:00   W:01   C:f   E:f   |   STR X W
+PC:b0   X:0a   Y:0b   Z:00   W:01   C:f   E:f   |   STR Y Z
+PC:c0   X:0a   Y:0b   Z:00   W:01   C:f   E:f   |   HLT

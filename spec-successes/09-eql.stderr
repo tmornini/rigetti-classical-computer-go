@@ -1,0 +1,5 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 0 X
+PC:10   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 1 Y
+PC:20   X:00   Y:01   Z:00   W:00   C:f   E:f   |   EQL X Y
+PC:30   X:00   Y:01   Z:00   W:00   C:f   E:f   |   JMC 30
+PC:40   X:00   Y:01   Z:00   W:00   C:f   E:f   |   HLT

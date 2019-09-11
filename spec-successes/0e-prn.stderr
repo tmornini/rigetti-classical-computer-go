@@ -1,0 +1,9 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 52 X
+PC:10   X:52   Y:00   Z:00   W:00   C:f   E:f   |   LDI 43 Y
+PC:20   X:52   Y:43   Z:00   W:00   C:f   E:f   |   LDI 43 Z
+PC:30   X:52   Y:43   Z:43   W:00   C:f   E:f   |   LDI a W
+PC:40   X:52   Y:43   Z:43   W:0a   C:f   E:f   |   PRN X
+PC:50   X:52   Y:43   Z:43   W:0a   C:f   E:f   |   PRN Y
+PC:60   X:52   Y:43   Z:43   W:0a   C:f   E:f   |   PRN Z
+PC:70   X:52   Y:43   Z:43   W:0a   C:f   E:f   |   PRN W
+PC:81   X:52   Y:43   Z:43   W:0a   C:f   E:f   |   HLT

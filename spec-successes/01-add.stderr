@@ -1,0 +1,4 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 1 X
+PC:10   X:01   Y:00   Z:00   W:00   C:f   E:f   |   LDI 2 Y
+PC:20   X:01   Y:02   Z:00   W:00   C:f   E:f   |   ADD X Y Z
+PC:30   X:01   Y:02   Z:03   W:00   C:f   E:f   |   HLT

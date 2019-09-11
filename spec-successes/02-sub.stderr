@@ -1,0 +1,4 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 84 X
+PC:10   X:84   Y:00   Z:00   W:00   C:f   E:f   |   LDI 83 Y
+PC:20   X:84   Y:83   Z:00   W:00   C:f   E:f   |   SUB X Y Z
+PC:31   X:84   Y:83   Z:01   W:00   C:f   E:f   |   HLT

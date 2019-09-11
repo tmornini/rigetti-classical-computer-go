@@ -1,0 +1,6 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 2a X
+PC:10   X:2a   Y:00   Z:00   W:00   C:f   E:f   |   LDI 0 Y
+PC:20   X:2a   Y:00   Z:00   W:00   C:f   E:f   |   STR X Y
+PC:30   X:2a   Y:00   Z:00   W:00   C:f   E:f   |   LDM Y Z
+PC:40   X:2a   Y:00   Z:2a   W:00   C:f   E:f   |   PRN Z
+PC:50   X:2a   Y:00   Z:2a   W:00   C:f   E:f   |   HLT

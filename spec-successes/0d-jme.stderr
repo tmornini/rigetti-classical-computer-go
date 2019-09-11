@@ -1,0 +1,11 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 0 X
+PC:10   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 0 Y
+PC:20   X:00   Y:00   Z:00   W:00   C:f   E:f   |   DIV X Y Z
+PC:30   X:00   Y:00   Z:00   W:00   C:f   E:t   |   JME 50
+PC:50   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 2a W
+PC:60   X:00   Y:00   Z:00   W:2a   C:f   E:f   |   PRN W
+PC:70   X:00   Y:00   Z:00   W:2a   C:f   E:f   |   LDI 1 Y
+PC:80   X:00   Y:01   Z:00   W:2a   C:f   E:f   |   DIV X Y Z
+PC:90   X:00   Y:01   Z:00   W:2a   C:f   E:f   |   JME 90
+PC:a0   X:00   Y:01   Z:00   W:2a   C:f   E:f   |   PRN W
+PC:b0   X:00   Y:01   Z:00   W:2a   C:f   E:f   |   HLT

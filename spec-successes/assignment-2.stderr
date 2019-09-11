@@ -1,0 +1,60 @@
+PC:00   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 0 X
+PC:03   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDI 1 W
+PC:06   X:00   Y:00   Z:00   W:01   C:f   E:f   |   LDI 48 Y
+PC:09   X:00   Y:48   Z:00   W:01   C:f   E:f   |   STR Y X
+PC:0c   X:00   Y:48   Z:00   W:01   C:f   E:f   |   ADD X W X
+PC:10   X:01   Y:48   Z:00   W:01   C:f   E:f   |   LDI 69 Y
+PC:13   X:01   Y:69   Z:00   W:01   C:f   E:f   |   STR Y X
+PC:16   X:01   Y:69   Z:00   W:01   C:f   E:f   |   ADD X W X
+PC:1a   X:02   Y:69   Z:00   W:01   C:f   E:f   |   LDI 21 Y
+PC:1d   X:02   Y:21   Z:00   W:01   C:f   E:f   |   STR Y X
+PC:20   X:02   Y:21   Z:00   W:01   C:f   E:f   |   ADD X W X
+PC:24   X:03   Y:21   Z:00   W:01   C:f   E:f   |   LDI a Y
+PC:27   X:03   Y:0a   Z:00   W:01   C:f   E:f   |   STR Y X
+PC:2a   X:03   Y:0a   Z:00   W:01   C:f   E:f   |   ADD X W X
+PC:2e   X:04   Y:0a   Z:00   W:01   C:f   E:f   |   LDI 0 Y
+PC:31   X:04   Y:00   Z:00   W:01   C:f   E:f   |   STR Y X
+PC:34   X:04   Y:00   Z:00   W:01   C:f   E:f   |   ADD X W X
+PC:40   X:05   Y:00   Z:00   W:01   C:f   E:f   |   LDI 0 X
+PC:50   X:00   Y:00   Z:00   W:01   C:f   E:f   |   LDI 0 Z
+PC:60   X:00   Y:00   Z:00   W:01   C:f   E:f   |   LDI 0 W
+PC:70   X:00   Y:00   Z:00   W:00   C:f   E:f   |   LDM X Y
+PC:80   X:00   Y:48   Z:00   W:00   C:f   E:f   |   EQL Y W
+PC:90   X:00   Y:48   Z:00   W:00   C:f   E:f   |   JMC f0
+PC:a0   X:00   Y:48   Z:00   W:00   C:f   E:f   |   PRN Y
+PC:b0   X:00   Y:48   Z:00   W:00   C:f   E:f   |   LDI 1 W
+PC:c0   X:00   Y:48   Z:00   W:01   C:f   E:f   |   ADD X W X
+PC:d0   X:01   Y:48   Z:00   W:01   C:f   E:f   |   ADD Z W Z
+PC:e0   X:01   Y:48   Z:01   W:01   C:f   E:f   |   JMP 60
+PC:60   X:01   Y:48   Z:01   W:01   C:f   E:f   |   LDI 0 W
+PC:70   X:01   Y:48   Z:01   W:00   C:f   E:f   |   LDM X Y
+PC:80   X:01   Y:69   Z:01   W:00   C:f   E:f   |   EQL Y W
+PC:90   X:01   Y:69   Z:01   W:00   C:f   E:f   |   JMC f0
+PC:a0   X:01   Y:69   Z:01   W:00   C:f   E:f   |   PRN Y
+PC:b0   X:01   Y:69   Z:01   W:00   C:f   E:f   |   LDI 1 W
+PC:c0   X:01   Y:69   Z:01   W:01   C:f   E:f   |   ADD X W X
+PC:d0   X:02   Y:69   Z:01   W:01   C:f   E:f   |   ADD Z W Z
+PC:e0   X:02   Y:69   Z:02   W:01   C:f   E:f   |   JMP 60
+PC:60   X:02   Y:69   Z:02   W:01   C:f   E:f   |   LDI 0 W
+PC:70   X:02   Y:69   Z:02   W:00   C:f   E:f   |   LDM X Y
+PC:80   X:02   Y:21   Z:02   W:00   C:f   E:f   |   EQL Y W
+PC:90   X:02   Y:21   Z:02   W:00   C:f   E:f   |   JMC f0
+PC:a0   X:02   Y:21   Z:02   W:00   C:f   E:f   |   PRN Y
+PC:b0   X:02   Y:21   Z:02   W:00   C:f   E:f   |   LDI 1 W
+PC:c0   X:02   Y:21   Z:02   W:01   C:f   E:f   |   ADD X W X
+PC:d0   X:03   Y:21   Z:02   W:01   C:f   E:f   |   ADD Z W Z
+PC:e0   X:03   Y:21   Z:03   W:01   C:f   E:f   |   JMP 60
+PC:60   X:03   Y:21   Z:03   W:01   C:f   E:f   |   LDI 0 W
+PC:70   X:03   Y:21   Z:03   W:00   C:f   E:f   |   LDM X Y
+PC:80   X:03   Y:0a   Z:03   W:00   C:f   E:f   |   EQL Y W
+PC:90   X:03   Y:0a   Z:03   W:00   C:f   E:f   |   JMC f0
+PC:a0   X:03   Y:0a   Z:03   W:00   C:f   E:f   |   PRN Y
+PC:b0   X:03   Y:0a   Z:03   W:00   C:f   E:f   |   LDI 1 W
+PC:c0   X:03   Y:0a   Z:03   W:01   C:f   E:f   |   ADD X W X
+PC:d0   X:04   Y:0a   Z:03   W:01   C:f   E:f   |   ADD Z W Z
+PC:e0   X:04   Y:0a   Z:04   W:01   C:f   E:f   |   JMP 60
+PC:60   X:04   Y:0a   Z:04   W:01   C:f   E:f   |   LDI 0 W
+PC:70   X:04   Y:0a   Z:04   W:00   C:f   E:f   |   LDM X Y
+PC:80   X:04   Y:00   Z:04   W:00   C:f   E:f   |   EQL Y W
+PC:90   X:04   Y:00   Z:04   W:00   C:t   E:f   |   JMC f0
+PC:f0   X:04   Y:00   Z:04   W:00   C:f   E:f   |   HLT
