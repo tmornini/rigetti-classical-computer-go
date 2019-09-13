@@ -1,0 +1,77 @@
+#!/bin/bash
+
+( cd rcc && go build || exit 1 ) || exit 1
+
+for hexpathname in spec-*/*.hex; do
+  binpathname=${hexpathname::${#hexpathname}-4}.bin
+  xxd -r $hexpathname > $binpathname
+done
+
+export DEBUG=true
+export NONOP=true
+
+EXIT_STATUS=0
+
+for binpathname in spec-failures/*.bin; do
+  pathname=${binpathname::${#binpathname}-4}
+
+  cat_command="cat $pathname.stdout"
+  SPEC_STDOUT=$($cat_command)
+
+  cat_command="cat $pathname.stderr"
+  SPEC_STDERR=$($cat_command)
+
+  STDOUT=$(rcc/rcc $binpathname 2>/dev/null)
+  STDOUT_STATUS=$?
+
+  STDERR=$(rcc/rcc $binpathname 2>&1 1>/dev/null)
+  STDERR_STATUS=$?
+
+  if (( STDOUT_STATUS != 0 ))          && \
+     (( STDERR_STATUS != 0 ))          && \
+     [[ "$STDOUT" = "$SPEC_STDOUT" ]]  && \
+     [[ "$STDERR" = "$SPEC_STDERR" ]]; then
+    echo ✅ $binpathname
+  else
+    echo "$STDOUT" > $pathname.stdout
+    echo "$STDERR" > $pathname.stderr
+    echo 🛑 $binpathname
+    EXIT_STATUS=1
+  fi
+done
+
+for binpathname in spec-successes/*.bin; do
+  pathname=${binpathname::${#binpathname}-4}
+
+  cat_command="cat $pathname.stdout"
+  SPEC_STDOUT=$($cat_command)
+
+  cat_command="cat $pathname.stderr"
+  SPEC_STDERR=$($cat_command)
+
+  STDOUT=$(rcc/rcc $binpathname 1>&1 2>/dev/null)
+  STDOUT_STATUS=$?
+
+  STDERR=$(rcc/rcc $binpathname 2>&1 1>/dev/null)
+  STDERR_STATUS=$?
+
+  if (( STDOUT_STATUS == 0 ))          && \
+     (( STDERR_STATUS == 0 ))          && \
+     [[ "$STDOUT" = "$SPEC_STDOUT" ]]  && \
+     [[ "$STDERR" = "$SPEC_STDERR" ]]; then
+    echo ✅ $binpathname
+  else
+    echo "$STDOUT" > $pathname.stdout
+    echo "$STDERR" > $pathname.stderr
+    echo 🛑 $binpathname
+    EXIT_STATUS=1
+  fi
+done
+
+if (( EXIT_STATUS == 1 )); then
+  git diff
+fi
+
+rm spec-*/*.bin
+
+exit $EXIT_STATUS
